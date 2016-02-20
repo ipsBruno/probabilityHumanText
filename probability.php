@@ -8,7 +8,7 @@
   email@brunodasilva.com
 */
 
-function probability($name) {
+function probabilityHumanText($name) {
 
 	// Filter  to remove spaces, fix uppercase and accents
 	$name = str_replace(' ', '', strtoupper(normalizeChars($name)));
@@ -59,6 +59,10 @@ function probability($name) {
 	// Return percentual
 	return $bit;
 }
+
+/*
+   Function to clear accents: stackoverflow.com/questions/3371697/replacing-accented-characters-php
+*/
 
 function normalizeChars($s) {
 	$replace = array(
